@@ -1,0 +1,6 @@
+INFO User login successful
+ERROR Failed password for admin
+INFO Connection established
+WARNING Suspicious activity detected
+ERROR Failed password for root
+INFO User logout
