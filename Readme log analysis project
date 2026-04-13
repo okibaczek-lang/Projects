@@ -1,23 +1,28 @@
-# Log Analysis Project
+Projekt analizy logów
 
-## Description
-This project demonstrates basic log analysis using Linux command-line tools.
+Opis
 
-## Tools Used
-- Linux (WSL)
-- grep
-- wc
+Projekt pokazuje podstawową analizę plików logów z użyciem narzędzi systemu Linux. Celem było wykrywanie błędów oraz potencjalnie podejrzanych zdarzeń w logach systemowych.
 
-## Tasks Performed
-- Searched for failed login attempts
-- Identified suspicious activity in logs
-- Counted number of errors
+Użyte narzędzia
+Linux (WSL)
+grep – filtrowanie wpisów w logach
+wc – zliczanie wyników
 
-## Findings
-- Multiple failed login attempts for admin and root users
-- Possible brute force attack detected
+Wykonane zadania
 
-## Example Commands
-grep "ERROR" logs.txt  
-grep "Suspicious" logs.txt  
+Wyszukiwanie nieudanych prób logowania
+Identyfikacja podejrzanych wpisów w logach
+Analiza liczby błędów w systemie
+
+Wyniki analizy
+
+Wykryto wiele nieudanych prób logowania na konta admin oraz root
+Zidentyfikowano potencjalne próby ataku typu brute force
+Potwierdzono występowanie powtarzających się błędów w logach
+
+Przykładowe komendy
+
+grep "ERROR" logs.txt
+grep "Suspicious" logs.txt
 grep "ERROR" logs.txt | wc -l
