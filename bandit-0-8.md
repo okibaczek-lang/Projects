@@ -1,4 +1,4 @@
-# Bandit 0 → 9 (OverTheWire)
+# Bandit 0 → 8 (OverTheWire)
 
 ## Bandit 0 → 1
 Cel: Połączenie przez SSH i znalezienie hasła w pliku.
