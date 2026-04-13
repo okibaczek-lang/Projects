@@ -1,61 +1,70 @@
-Bandit 0 → 1
+# Bandit 0 → 9 (OverTheWire)
 
+## Bandit 0 → 1
 Cel: Połączenie przez SSH i znalezienie hasła w pliku.
 
-Połączenie:
+```bash
 ssh bandit0@bandit.labs.overthewire.org -p 2220
-Rozwiązanie:
 ls
 cat readme
-Bandit 1 → 2
+```
 
-Cel: Odczyt pliku o nazwie -
+## Bandit 1 → 2
+Cel: Odczyt pliku o nazwie "-"
 
-Rozwiązanie:
+```bash
 cat ./-
-Bandit 2 → 3
+```
 
+## Bandit 2 → 3
 Cel: Plik z nazwą zawierającą spacje
 
-Rozwiązanie:
+```bash
 cat "spaces in this filename"
-Bandit 3 → 4
+```
 
+## Bandit 3 → 4
 Cel: Ukryty plik w katalogu
 
-Rozwiązanie:
+```bash
 ls -a
 cat .hidden
-Bandit 4 → 5
+```
 
-Cel: Znalezienie pliku typu tekstowego
+## Bandit 4 → 5
+Cel: Znalezienie pliku tekstowego
 
-Rozwiązanie:
+```bash
+ls -a
 file ./*
-cat ./file07
-Bandit 5 → 6
+cat ./-file07
+```
 
-Cel: Plik o określonych właściwościach (human-readable, ~1033 bytes)
+## Bandit 5 → 6
+Cel: Plik o określonym rozmiarze (~1033 bytes)
 
-Rozwiązanie:
+```bash
 find . -type f -size 1033c
-cat ./maybehere07/.file2
-Bandit 6 → 7
+```
 
-Cel: Znalezienie pliku w systemie spełniającego warunki (owner, size)
+## Bandit 6 → 7
+Cel: Znalezienie pliku w systemie (owner + size)
 
-Rozwiązanie:
+```bash
 find / -user bandit7 -group bandit6 -size 33c 2>/dev/null
 cat /var/lib/dpkg/info/bandit7.password
-Bandit 7 → 8
+```
 
-Cel: Znalezienie hasła obok słowa „millionth”
+## Bandit 7 → 8
+Cel: Znalezienie hasła przy słowie "millionth"
 
-Rozwiązanie:
+```bash
 grep "millionth" data.txt
-Bandit 8 → 9
+```
 
+## Bandit 8 → 9
 Cel: Znalezienie unikalnej linii (występuje tylko raz)
 
-Rozwiązanie:
+```bash
 sort data.txt | uniq -u
+```
